@@ -1,0 +1,19 @@
+.style {
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+    border: 1px dashed green;
+}
+style h2 {
+    padding: 100px;
+    position: relative;
+    z-index: 2;
+}
+style img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: auto;
+    opacity: 0.6;
+}

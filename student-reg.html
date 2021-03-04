@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+    <title> Student Registration Form </title>
+    <link href="image/Tab logo.jpeg" rel="icon">
+    <link href='https://fonts.googleapis.com/css?family=Aref Ruqaa' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Aref Ruqaa';font-size: 17px;
+        }
+        </style>
+         <script>
+            function checkname() {
+                nameexp = /^[a-zA-Z ]{3,10}$/;
+                custname = document.getElementById("fname").value;         //name check
+            }
+            function checksurname() {
+                surnameexp = /^[a-zA-Z ]{3,10}$/;
+                custname = document.getElementById("sname").value;         //surname check
+            }
+          
+            function checkuid() {
+                uidexp = /^[0-9]{10}$/;
+                custuid = document.getElementById("uid").value;             //uid check
+            }    
+
+            function checkmobno() {
+                mobnoexp = /^[6789]\d{9}$/;                                
+                custmobno = document.getElementById("mobno").value;         //mob check
+            }
+        
+            function checkemail() {
+                emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                custemail = document.getElementById("email").value;                 //email check
+            }
+               
+            function checkpassword() {
+                passwordexp = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/;   
+                custpassword = document.getElementById("password").value;                   //password check
+            }
+
+            function checkroll() {
+                rollexp = /^[0-9]{10}$/;
+                custroll = document.getElementById("roll").value;             //roll check
+            } 
+            
+            function checkreg() {
+                regexp = /^[0-9]{11}$/;
+                custreg = document.getElementById("reg").value;             //reg check
+            } 
+
+        </script>
+</head>
+
+<body >
+    <div class="container" style="background-image: url(image/Blue\ to\ Purple\ Background\ iPhone\ Wallpapers\ iPhone\ 5s4s3G.jpg);" >
+     <div class="row">
+       <div class="col-md-9 col-sm-8 mx-auto">
+         <div class="card">
+           <div class="card-body" style="background-color: #eeefff">
+                        <div class="text-center">
+                            <b><h1>Registration Form</h1></b>
+                        </div>
+                        <br/>
+                        <div>
+    <form>
+    <label  class="font-weight-bold text-primary">First Name</label>
+    <input type="text" onblur="checkname()" id="fname" required="required"
+    placeholder="Enter  Your  Name">
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+    <label  class="font-weight-bold text-primary">Last Name</label>
+    <input type="text" onblur="checksurname()" id="sname" required="required"
+    placeholder="Enter  Last  Name">
+    <br/><br/>
+    <label class="font-weight-bold text-primary">Create USER ID</label>
+    <input type="text" onblur="checkuid()" id="uid" required="required"
+    placeholder="User  ID">
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <label class="font-weight-bold text-primary">Date of Birth</label>
+    <input type="date">
+    <br/><br/>
+    <label class="font-weight-bold text-primary">Create Password</label>
+    <input type="password" onblur="checkpassword()" id="password" required="required"
+    placeholder="Enter  New  Password">
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+ <label class="font-weight-bold text-primary">Confirm Password</label>
+    <input type="password" onblur="checkpassword()" id="password" required="required"
+    placeholder="Confirm  New  Password">
+    <br/>
+    <div><i>Digit, LowerCase, UpperCase, Max 8</i></div> 
+     <br/>
+    <label class="font-weight-bold text-primary">Mobile Number</label>
+    <input type="tel" onblur="checkmobno()" id="mobno" required="required"
+    placeholder="Enter  Mobile  Number">
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+    <label class="font-weight-bold text-primary">Enter E-Mail ID</label>
+    <input type="email" onblur="checkemail()" id="email" required="required"
+    placeholder="example@gmail.com">
+    <br/><br/>
+    <label class="font-weight-bold text-primary">University Roll No.</label>
+    <input type="tel" onblur="checkname()" id="fname" required="required"
+    placeholder="Enter  Your  Roll">
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+    <label class="font-weight-bold text-primary">University Reg.No.</label>
+    <input type="tel" onblur="checkname()" id="fname" required="required"
+    placeholder="Enter  Your  Reg.">
+    <br/><br/>
+    &nbsp;  &nbsp; &nbsp;   &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;   &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+    <input type="radio" name="x">MALE
+    <input type="radio" name="x">FEMALE
+    <input type="radio" name="x">OTHER
+    <br/><br/>
+    &nbsp;  &nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+    Batch (in year): 
+     <br/>
+     &nbsp;&nbsp; &nbsp;   &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+     <select>
+    <option>None</option>
+      <option>2017-21</option>
+     <option>2018-22</option>
+     <option>2019-23</option>
+     <option>2020-24</option>
+     <option>2021-25</option>
+     </select>
+   <br/><br/>
+     &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+   Select Depertment: 
+    <br/>
+
+    &nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+<select>
+    <option>None</option>
+<option>Electrical Engineering</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Eletronics & Commucation Engineering</option>
+<option>Computer Science & Engineering</option>
+</select>
+<br/><br/><br/>
+ &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+ &nbsp;&nbsp;
+ <input class="btn btn-secondary btn-lg" type="reset" value="Reset">
+                            </form>
+                        </div> 
+                    </div> 
+                </div> 
+            </div>
+        </div> 
+    </div> 
+    
+    <table width = "100%" border = "0">
+        <tr>
+            <td colspan = "2" bgcolor = "#b5dcb3">
+               <center>
+                &copy; Copyright <strong>2020-21. </strong><a href="#smart educational system">  Smart Educational System</a>
+            </div>
+            <div class="credits">
+          
+             <h4> Gargi Memorial Institute of Technology </h4>
+               </center>
+            </td>
+         </tr>
+         
+      </table>
+</body>
+
+</html>
